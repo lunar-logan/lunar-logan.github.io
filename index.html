@@ -11,6 +11,11 @@
 <body>
 
 <h1>System design notes</h1>
+    <h2>General information</h2>
+    <ul>
+        <li>Amazon AWS RDS supports cross-region read-replica replication for PostgresSQL</li>
+        <li>This is done vai streaming WAL (transaction logs for PostgreSQL) </li>
+    </ul>
     <h2>TinyURL design</h2>
     <p>
         <ul>
