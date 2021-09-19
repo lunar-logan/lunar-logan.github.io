@@ -17,6 +17,12 @@
         <li>Amazon AWS RDS supports cross-region read-replica replication for PostgresSQL</li>
         <li>This is done vai streaming WAL (transaction logs for PostgreSQL) </li>
     </ul>
+    <h3>MongoDB</h3>
+    <ul>
+        <li>Supports document level <pre>ttl</pre>. Expired documents are deleted by a backgroud thread</li>
+        <li>Delete thread runs every 60s, so there could be a delay upto a minute </li>
+        <li>Deleted documents could be streamed via change streams on delete</li>
+    </ul>
     <h2>TinyURL design</h2>
     <p>
         <ul>
