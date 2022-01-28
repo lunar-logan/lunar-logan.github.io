@@ -9,10 +9,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
+<section class="hero is-fullheight is-primary">
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            <img src="/static/assets/favicon_io/android-chrome-192x192.png" height="28">
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -28,7 +29,7 @@
                 Home
             </a>
 
-            <a class="navbar-item" href="/pitaicount.html">
+            <a class="navbar-item" href="/pitaicount">
                 Pitai Dashboard
             </a>
 
@@ -36,25 +37,32 @@
 
     </div>
 </nav>
+<div class="hero-body">
+    <div class="container">
+        <h1 class="subtitle">Hi there,</h1>
+        <h1 class="title">I'm Anurag</h1>
+    </div>
+</div>
+</section>
 
-<h1>System design notes</h1>
-    <h2>General information</h2>
-    <ul>
-        <li>Single region can have multiple availability zones</li>
-        <li>Amazon AWS RDS supports cross-region read-replica replication for PostgresSQL</li>
-        <li>This is done vai streaming WAL (transaction logs for PostgreSQL) </li>
-    </ul>
-    <h3>MongoDB</h3>
-    <ul>
-        <li>Supports document level <b>ttl</b>. Expired documents are deleted by a backgroud thread</li>
-        <li>Delete thread runs every 60s, so there could be a delay upto a minute </li>
-        <li>Deleted documents could be streamed via change streams on delete</li>
-    </ul>
-    <h2>TinyURL design</h2>
-    <p>
-        <ul>
-            <li>We could use multiple domains to scale. For eg. tinyurl.com, other.co, etc</li>
-        </ul>
-    </p>
+<!--<h1>System design notes</h1>-->
+<!--    <h2>General information</h2>-->
+<!--    <ul>-->
+<!--        <li>Single region can have multiple availability zones</li>-->
+<!--        <li>Amazon AWS RDS supports cross-region read-replica replication for PostgresSQL</li>-->
+<!--        <li>This is done vai streaming WAL (transaction logs for PostgreSQL) </li>-->
+<!--    </ul>-->
+<!--    <h3>MongoDB</h3>-->
+<!--    <ul>-->
+<!--        <li>Supports document level <b>ttl</b>. Expired documents are deleted by a backgroud thread</li>-->
+<!--        <li>Delete thread runs every 60s, so there could be a delay upto a minute </li>-->
+<!--        <li>Deleted documents could be streamed via change streams on delete</li>-->
+<!--    </ul>-->
+<!--    <h2>TinyURL design</h2>-->
+<!--    <p>-->
+<!--        <ul>-->
+<!--            <li>We could use multiple domains to scale. For eg. tinyurl.com, other.co, etc</li>-->
+<!--        </ul>-->
+<!--    </p>-->
 </body>
 </html>
